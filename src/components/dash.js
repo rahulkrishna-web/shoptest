@@ -1,6 +1,6 @@
 // src/Home.js
 import React from 'react';
-import {NavMenu} from '@shopify/app-bridge-react';
+import {NavMenu,TitleBar} from '@shopify/app-bridge-react';
 
 
 const Dash = () => {
