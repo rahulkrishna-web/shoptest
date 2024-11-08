@@ -4,7 +4,7 @@ export default async (req, res) => {
       const { code, shop } = req.body;  // Get the code and shop from the request body
   
       const postData = {
-        client_id: process.env.SHOPIFY_API_KEY,  // Use server-side environment variable
+        client_id: process.env.REACT_APP_SHOPIFY_API_KEY,  // Use server-side environment variable
         client_secret: process.env.SHOPIFY_API_SECRET,
         code: code,  // The authorization code from Shopify
       };
