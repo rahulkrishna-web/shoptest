@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Auth() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [responseData, setResponseData] = useState(null);
   const location = useLocation();  // To access query parameters
-  const history = useHistory();
+  const navigate = useNavigate();  // Replaces useHistory in React Router v6
 
   useEffect(() => {
     // Extract the authorization code and shop from the URL (query params)
@@ -37,7 +37,7 @@ function Auth() {
           setResponseData(data); // Handle the response data
 
           // You can navigate the user after successful token exchange
-          //history.push('/dashboard');  // Example: Navigate to the dashboard page
+          navigate('/dashboard');  // Example: Navigate to the dashboard page
 
         } catch (err) {
           setError('Error during token exchange');
@@ -51,7 +51,7 @@ function Auth() {
     } else {
       setError('Authorization code or shop not found');
     }
-  }, [location, history]); // Trigger when the component mounts or the URL changes
+  }, [location, navigate]); // Trigger when the component mounts or the URL changes
 
   return (
     <div>
