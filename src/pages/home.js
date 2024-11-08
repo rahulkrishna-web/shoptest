@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Dash from '../components/dash';
+import ConnectForm from '../components/connectForm';
 
 const Home = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const Home = () => {
     <div>
       <h1>Welcome to the Auth Page</h1>
       <p>This is the homepage of your React app.</p>
+      <ConnectForm />
 
       {/* Link to the Auth page */}
       <p>
