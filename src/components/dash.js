@@ -1,17 +1,18 @@
 // src/Home.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {NavMenu} from '@shopify/app-bridge-react';
+
 
 const Dash = () => {
   return (
     <div>
-      <h1>Welcome to the Dash Page</h1>
-      <p>This is the homepage of your React app.</p>
-
-      {/* Link to the Auth page */}
-      <p>
-        <Link to="/">Go to Home Page</Link>
-      </p>
+      <NavMenu>
+      <a href="/" rel="home">
+        Home
+      </a>
+      <a href="/events">Events</a>
+      <a href="/settings">Settings</a>
+        </NavMenu>
     </div>
   );
 };
