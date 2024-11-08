@@ -1,7 +1,7 @@
 // src/Home.js
 import React from 'react';
 import {NavMenu,TitleBar} from '@shopify/app-bridge-react';
-import {Card, EmptyState} from '@shopify/polaris';
+import {Card, EmptyState, Page} from '@shopify/polaris';
 
 
 const Dash = () => {
@@ -17,6 +17,7 @@ const Dash = () => {
       <a href="/tickets">Tickets</a>
       <a href="/settings">Settings</a>
       </NavMenu>
+      <Page>
       <Card sectioned>
       <EmptyState
         heading="Manage your eventss"
@@ -30,6 +31,7 @@ const Dash = () => {
         <p>Create and manage events.</p>
       </EmptyState>
     </Card>
+    </Page>
     </div>
   );
 };
