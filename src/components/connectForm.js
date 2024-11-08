@@ -21,9 +21,9 @@ const ConnectForm = () => {
     setLoading(true);
     setError(null);
 
-    const apiKey = process.env.SHOPIFY_API_KEY;
-    const redirectUri = process.env.REDIRECT_URI;
-    const scopes = process.env.SHOPIFY_SCOPES;
+    const apiKey = process.env.REACT_APP_SHOPIFY_API_KEY;
+    const redirectUri = process.env.REACT_APP_REDIRECT_URI;
+    const scopes = process.env.REACT_APP_SHOPIFY_SCOPES;
     const state = Math.random().toString(36).substring(2);
 
     try {
