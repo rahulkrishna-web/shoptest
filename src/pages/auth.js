@@ -37,7 +37,7 @@ function Auth() {
           setResponseData(data); // Handle the response data
 
           // You can navigate the user after successful token exchange
-          navigate('/dashboard');  // Example: Navigate to the dashboard page
+          navigate('/');  // Example: Navigate to the dashboard page
 
         } catch (err) {
           setError('Error during token exchange');
