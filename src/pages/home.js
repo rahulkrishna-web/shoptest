@@ -8,9 +8,9 @@ import ConnectForm from '../components/connectForm';
 const Home = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const id = queryParams.get('id');
+  const shop = queryParams.get('shop');
 
-  if(id) return <Dash />
+  if(shop) return <Dash />
 
   return (
     <div>
