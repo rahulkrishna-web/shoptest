@@ -14,14 +14,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Welcome to the Auth Page</h1>
-      <p>This is the homepage of your React app.</p>
       <ConnectForm />
-
-      {/* Link to the Auth page */}
-      <p>
-        <Link to="/auth">Go to Auth Page</Link>
-      </p>
     </div>
   );
 };
