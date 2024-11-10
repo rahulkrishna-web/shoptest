@@ -35,7 +35,9 @@ function Auth() {
 
           const data = await res.json();
           setResponseData(data); // Handle the response data
-
+          if (data.success){
+            navigate('/');
+          }
           // You can navigate the user after successful token exchange
           //navigate('/');  // Example: Navigate to the dashboard page
 
