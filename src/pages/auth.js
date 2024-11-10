@@ -22,7 +22,7 @@ function Auth() {
 
         try {
           // Trigger the post request to your serverless function
-          const res = await fetch('/api/token-exchange', {
+          const res = await fetch('https://eventsguy.clyrix.com/api/exchange-token', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function Auth() {
           setResponseData(data); // Handle the response data
 
           // You can navigate the user after successful token exchange
-          navigate('/');  // Example: Navigate to the dashboard page
+          //navigate('/');  // Example: Navigate to the dashboard page
 
         } catch (err) {
           setError('Error during token exchange');
